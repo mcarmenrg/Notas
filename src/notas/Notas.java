@@ -30,18 +30,18 @@ public class Notas {
 	}
 
 	/**
-	 * @param cali
+	 * @param num_nota
 	 * @return
 	 */
-	public static String extracted(int cali) {
+	public static String extracted(int num_nota) {
 		String calificacion;
-		if (cali >= 0 && cali < 5)
+		if (num_nota >= 0 && num_nota < 5)
 			calificacion = "Suspenso";
-		else if (cali >= 5 && cali < 7)
+		else if (num_nota >= 5 && num_nota < 7)
 			calificacion = "Aprobado";
-		else if (cali >= 7 && cali < 9)
+		else if (num_nota >= 7 && num_nota < 9)
 			calificacion = "Notable";
-		else if (cali >= 9 && cali <= 10)
+		else if (num_nota >= 9 && num_nota <= 10)
 			calificacion = "Sobresaliente";
 		else
 			calificacion = "La nota introducida no es correcta";
