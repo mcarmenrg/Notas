@@ -23,18 +23,28 @@ public class Notas {
 		System.out.print("Introduzca una nota: ");
 		nota = reader.nextInt();
 
-		if (nota >= 0 && nota < 5)
-			calificacion = "Suspenso";
-		else if (nota >= 5 && nota < 7)
-			calificacion = "Aprobado";
-		else if (nota >= 7 && nota < 9)
-			calificacion = "Notable";
-		else if (nota >= 9 && nota <= 10)
-			calificacion = "Sobresaliente";
-		else
-			calificacion = "La nota introducida no es correcta";
+		calificacion = extracted(nota);
 
 		System.out.println(calificacion);
 		reader.close();
+	}
+
+	/**
+	 * @param cali
+	 * @return
+	 */
+	public static String extracted(int cali) {
+		String calificacion;
+		if (cali >= 0 && cali < 5)
+			calificacion = "Suspenso";
+		else if (cali >= 5 && cali < 7)
+			calificacion = "Aprobado";
+		else if (cali >= 7 && cali < 9)
+			calificacion = "Notable";
+		else if (cali >= 9 && cali <= 10)
+			calificacion = "Sobresaliente";
+		else
+			calificacion = "La nota introducida no es correcta";
+		return calificacion;
 	}
 }
